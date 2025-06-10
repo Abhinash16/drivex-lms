@@ -9,7 +9,7 @@ if (
   baseDomain = "http://localhost:3000";
   console.log("Running in localhost environment");
 } else {
-  baseDomain = "http://localhost:3000";
+  baseDomain = "https://glacier.on-track.in";
   // Code for other environments (e.g., production)
   console.log("Running in production environment");
 }
