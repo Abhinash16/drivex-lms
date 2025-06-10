@@ -19,7 +19,7 @@ const routes = [
       },
       {
         path: "/leads",
-        name: "Fresh Leads",
+        name: " Leads",
         component: () => import("../views/LeadsView.vue"),
       },
       {
@@ -29,7 +29,7 @@ const routes = [
       },
       {
         path: "/leads-contacted",
-        name: "Fresh Leads",
+        name: "Leads Contacted",
         component: () => import("../views/TicketsList/ContactedTickets.vue"),
       },
       {

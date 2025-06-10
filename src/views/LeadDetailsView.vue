@@ -55,7 +55,7 @@
               </v-col>
             </v-row>
 
-            <div class="d-flex">
+            <div class="d-flex" v-if="ticketData">
               <div class="my-auto">Call Status</div>
               <v-chip
                 :text-color="getCallStatusColor(ticketData.callStatus)"
@@ -122,6 +122,7 @@
                 <v-timeline-item
                   v-for="(data, index) in ticketComments"
                   :key="index"
+                  :icon="getIcon(data.type)"
                 >
                   <v-row class="pt-1">
                     <v-col cols="4">
@@ -532,8 +533,8 @@
                             </v-btn>
                           </div>
                         </div>
-                      </v-container>
-                    </v-tab-item>
+                      </v-container></v-tab-item
+                    >
                     <v-tab-item>
                       <v-list dense shaped>
                         <v-list-item @click="scheduleLeadDialog = true">
@@ -976,7 +977,7 @@
     </v-dialog>
 
     <v-dialog scrollable max-width="500" v-model="updateCallStatusModal">
-      <v-sheet>
+      <v-sheet v-if="ticketData">
         <v-container>
           <v-select
             label="Select Call Status"
@@ -1011,7 +1012,7 @@ export default {
       applicationId: this.$route.params.id,
       ticketData: null,
       ticketComments: [],
-      currentUserLoggedIn: this.$store.getters.getLoggedInUser,
+
       availableCallStatuses: [
         "default",
         "Not Reachable",
@@ -1109,7 +1110,24 @@ export default {
     this.fetchComments();
   },
 
+  computed: {
+    currentUserLoggedIn() {
+      return this.$store.getters.getLoggedInUser;
+    },
+  },
   methods: {
+    getIcon(stage) {
+      switch (stage) {
+        case "stage_change":
+          return "mdi-phone";
+        case "callstatus_change": // Example: add another case for a different stage
+          return "mdi-all-inclusive";
+        case "chat":
+          return "mdi-chat-outline"; // Example: another stage
+        default:
+          return "mdi-chat-outline"; // Default icon for unknown stages
+      }
+    },
     checkOverdue(dateString) {
       const date = moment(dateString, "YYYY-MM-DD");
       const today = moment().startOf("day");
