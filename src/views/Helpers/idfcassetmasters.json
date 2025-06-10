@@ -1,0 +1,1358 @@
+[
+  {
+    "assetInfoId": "honda-cb-shine-sp-disc-cbs",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-dio-deluxe-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb-shine-sp-drum-cbs",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-dio-standard-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-dio-deluxe-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-gold-wing-gl1800-2016-2017-airbag",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-activa-6g-deluxe",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb300r-2018-2019-standard",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-shine-disc-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb-shine-sp-drum",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cd-110-dream-deluxe--bs-vi",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-grazia-disc",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cbr1000rr-fireblade-2018-standard",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-shine-disc-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-shine-drum-bs6",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-grazia-disc",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-grazia-drum",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb-unicorn-160-disc-bs-iv",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cbr1000rr-fireblade-2019-standard",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb350rs-dual-tone",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb350rs-monotone",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cb200x-standard",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-cbr-650r-standard",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-sp-125-drum",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "honda-sp-125-disc",
+    "brand": "honda-bikes"
+  },
+  {
+    "assetInfoId": "hero-hf-deluxe-kick-alloy-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-glamour-disc-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-hf-deluxe-kick-spoke-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-hf-deluxe-self-alloy-i3s-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-hf-deluxe-self-alloy-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-maestro-edge-125-alloy-wheel-drum-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-super-splendor-self-disc-alloy-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-xtreme-200s-standard",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-passion-pro-disc-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-maestro-edge-110-drum-brake-alloy-wheel-vx",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-hf-deluxe-self-alloy-i3s-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-splendor-plus-self-alloy-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-pleasure-plus-sheet-metal-wheel-bs6",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-splendor-plus-i3s-ibs",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-glamour-125-drum-brake",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-xtreme-160r-stealth-edition",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-pleasure-plus-xtec-edition-drum",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-pleasure-plus-xtec-edition-drum-jubilant-yellow",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-glamour-xtec-drum",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-glamour-xtec-disc",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-splendor-plus-black-and-accent-edition",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-maestro-edge-125-connected-2021",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-xtreme-160r-stealth-edition",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-passion-pro-drum-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-passion-pro-disc-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-super-splendor-self-drum-alloy-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-super-splendor-self-disc-alloy-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-splendor-plus-i3s-ibs",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-destini-125-lx-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-destini-125-vx-bs-vi",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-maestro-edge-125-drum-2021",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-xtreme-200s-standard",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "hero-maestro-edge-125-disc-2021",
+    "brand": "hero-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-standard",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-xl100-heavy-duty-i-touch-start-se-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-xl100-heavy-duty-i-touch-start",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-zx-disc",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-apache-rtr-180-abs-2019-dual-channel-abs",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-apache-rtr-200-4v-single-channel-abs-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-scooty-pep-plus-matte-edition-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-star-city-spoke-wheels",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-ntorq-125-race-edition-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-zx-disc",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-ntorq-125-super-squad-edition-disc",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-125-drum-alloy-wheel",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-125-disc-alloy-wheel",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-jupiter-125-drum-alloy-wheel",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-raider-125-disc",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-xl100-heavy-duty-winner-edition",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-xl100-comfort-i-touch-start",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-iqube-standard",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-radeon-drum-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-apache-rtr-180-bs-vi",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "tvs-scooty-zest-110-standard",
+    "brand": "tvs-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fascino-125-dlx-disc-brake",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-ray-zr-125-street-rally",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz-s-fi-deluxe-bs-vi-2022",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fascino-125-hybrid-drum",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz-x-bluetooth",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-ray-zr-125-hybrid-disc",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-aerox-155-standard",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-ray-zr-125-hybrid-drum",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-yzf-r15s-v3.0-standard",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz25-s",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-ray-zr-125-hybrid-disc-motogp-edition",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz-s-fi-deluxe-bs-vi-2022",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz-fi-bs-vi-2021",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "yamaha-fz25-standard",
+    "brand": "yamaha-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-dominar-250-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-ns200-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-cruise-220-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-220-f-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-street-160-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-cruise-220-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-dominar-400-2018-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-platina-100-es-drum-2021",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-street-220-abs",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-platina-100-es-disc",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-cruise-220-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-avenger-street-160-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-220-f-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-ns200-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-dominar-250-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-ns160-twin-disc-abs-bs-vi",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-f250-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-ns125-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-ct-110-x",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-n250-standard",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-pulsar-125-disc-split-seat",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "bajaj-chetak-premium",
+    "brand": "bajaj-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-classic-signals-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-2020-redditch-ed--dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-himalayan-standard-bs-vi-2021",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-bullet-350-standard",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-2020-redditch-edition-dual-disc",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-bullet-350-es",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-himalayan-pine-green-and-granite-black",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-halcyon-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-classic-dark-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-halcyon-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-classic-chrome-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-classic-signals-dual-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-350-redditch-single-channel-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-continental-gt-650-standard-bs-vi",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-interceptor-650-standard-bs-vi",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "royal-enfield-classic-signals-abs",
+    "brand": "royal-enfield-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-road-glide-special-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-fat-boy-special-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-street-glide-special-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-heritage-classic-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-sportster-s-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-pan-america-1250-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-nightster-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-heritage-classic-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-fat-boy-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "harley-davidson-street-glide-standard",
+    "brand": "harley-davidson-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-sr-160-race-bs-vi",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "vespa-zx-125-bs-vi-fi",
+    "brand": "vespa-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-sr-125-bs-vi-fi",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-tuono-v4-1100-2018-2019-factory",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "vespa-vxl-125-facelift",
+    "brand": "vespa-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-rsv4-1100-factory-standard",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-sr-160-race-bs-vi",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-sxr-160-standard",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "vespa-sxl-150-racing-sixties",
+    "brand": "vespa-bikes"
+  },
+  {
+    "assetInfoId": "aprilia-rs-660-standard",
+    "brand": "aprilia-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-access-125-drum-cast-se-fi",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-access-125-se-disc-cbs-fi",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-burgman-street-125-bs-vi",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-access-125-disc-alloy-bluetooth",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-hayabusa-standard",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-gixxer-250-standard-bs-vi",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-gixxer-sf-250-motogp-edition-bs-vi",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-access-125-drum-alloy-bluetooth",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-avenis-125-race-edition",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-gixxer-sf-fi-standard",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-avenis-125-standard",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-gixxer-sf-fi-standard",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-gixxer-sf-fi-abs",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "suzuki-v-strom-650-xt-2018-2019-abs",
+    "brand": "suzuki-bikes"
+  },
+  {
+    "assetInfoId": "ktm-250-duke-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-390-duke-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc-125-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc-200-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc-390-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-200-duke-bs-vi",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-390-adventure-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-125-duke-bs-vi-2021",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc-200-2021-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc-125-2021-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-rc390-2014-2016-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-250-adventure-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-390-duke-abs-2013-2016-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "ktm-790-duke-standard",
+    "brand": "ktm-bikes"
+  },
+  {
+    "assetInfoId": "triumph-street-triple-rs-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-street-scrambler-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-rocket-3-r",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-bonneville-bobber-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-speed-twin-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-street-triple-r-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-tiger-900-gt",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-tiger-900-rally-pro",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-tiger-900-rally",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-tiger-850-sport-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-trident-660-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-speed-triple-1200-rs-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-speed-twin-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-speed-twin-2019-2020-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-rocket-3-r-221-special-edition",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-rocket-3-gt",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-rocket-3-gt-221-special-edition",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-bonneville-speedmaster-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-bonneville-t100-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "triumph-bonneville-t120-standard",
+    "brand": "triumph-bikes"
+  },
+  {
+    "assetInfoId": "indian-springfield-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-scout-bobber-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-chief-dark-horse-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-chieftain-elite-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-ftr-1200-2019-2020-race-replica",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-ftr-1200-2019-2020-s",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-chief-dark-horse-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "indian-scout-standard",
+    "brand": "indian-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f850-gs-2018-2019-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s-1000-xr-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-r-1250-r-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s-1000-r-2018-2019-sport",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s-1000-r-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f900xr-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-k-1600-b-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-pro-m-sport",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f850-gs-2018-2019-pro-low-suspension",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-r-1250-gs-2018-2019-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-r-1250-gs-adventure-2019-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-pro",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g-310-gs-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g-310-r-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-r18-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f900r-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-c-400-gt-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g-310-gs-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g-310-r-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s-1000-xr-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-r-ninet-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s-1000-r-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-k1600-gtl-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g-310-r-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-g310gs-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f750-gs-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-f850-gs-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "bmw-s1000-rr-2018-2019-standard",
+    "brand": "bmw-bikes"
+  },
+  {
+    "assetInfoId": "jawa-42-single-channel-abs-bs-vi",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "jawa-standard-single-channel-abs-bs-vi",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "jawa-42-dual-channel-abs-bs-vi",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "jawa-perak-standard",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "jawa-standard-khakhi-&-midnight-grey",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "jawa-standard-khakhi-&-midnight-grey",
+    "brand": "jawa-bikes"
+  },
+  {
+    "assetInfoId": "ducati-hypermotard-950-2018-2019-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-supersport-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-panigale-v4-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-panigale-v4-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-icon-dark",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-1100-2018-2019-sport",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-panigale-v4-r-2018-2019-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-desert-sled-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-supersport-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-diavel-1260-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-diavel-1260-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-hypermotard-950-sp",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-icon-dark",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-monster-bs6-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-streetfighter-v4-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-multistrada-950-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-1100-pro",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-streetfighter-v4-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-nightshift-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-1100-dark-pro",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-panigale-v2-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-monster-bs6-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-xdiavel-2018-2019-s",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-xdiavel-2018-2019-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "ducati-scrambler-icon-standard",
+    "brand": "ducati-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-klx-140g-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-kx250-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-400-krt-edition",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z900-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-h2r-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-w800-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z650-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-klx-110-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-kx100f-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-versys-1000-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-vulcan-s-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z900-rs-2018-2019-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-650-2018-2019-krt-edition",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-versys-650-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-650-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-kx450f-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-kx450-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-klx-450r-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-w800-2018-2019-street",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-vulcan-s-2018-2019-orange",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-versys-1000-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z900-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-klx-110-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-klx-140g-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-w800-2018-2019-street",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-1000-sx",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z650rs-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-300-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-z900-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-zx-10r-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-vulcan-s-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "kawasaki-ninja-300-standard",
+    "brand": "kawasaki-bikes"
+  },
+  {
+    "assetInfoId": "hero-electric-atria-lx",
+    "brand": "hero-electric-bikes"
+  },
+  {
+    "assetInfoId": "hero-electric-photon-hx",
+    "brand": "hero-electric-bikes"
+  },
+  {
+    "assetInfoId": "hero-electric-optima-hx-single-battery",
+    "brand": "hero-electric-bikes"
+  },
+  {
+    "assetInfoId": "hero-electric-optima-hx-dual-battery",
+    "brand": "hero-electric-bikes"
+  },
+  {
+    "assetInfoId": "ather-450x-plus",
+    "brand": "ather-bikes"
+  },
+  {
+    "assetInfoId": "ather-450x-standard",
+    "brand": "ather-bikes"
+  },
+  {
+    "assetInfoId": "ampere-magnus-ex-li",
+    "brand": "ampere-bikes"
+  },
+  {
+    "assetInfoId": "ampere-zeal-ex-li-battery",
+    "brand": "ampere-bikes"
+  },
+  {
+    "assetInfoId": "revolt-rv-400-standard",
+    "brand": "revolt-bikes"
+  },
+  {
+    "assetInfoId": "revolt-rv-400-premium",
+    "brand": "revolt-bikes"
+  },
+  {
+    "assetInfoId": "husqvarna-svartpilen-250-standard",
+    "brand": "husqvarna-bikes"
+  },
+  {
+    "assetInfoId": "husqvarna-vitpilen-250-standard",
+    "brand": "husqvarna-bikes"
+  },
+  {
+    "assetInfoId": "ola-s1-standard",
+    "brand": "ola-bikes"
+  },
+  {
+    "assetInfoId": "ola-s1-pro-standard",
+    "brand": "ola-bikes"
+  },
+  {
+    "assetInfoId": "joy-e-bike-glob-standard",
+    "brand": "joy-e-bike-bikes"
+  },
+  {
+    "assetInfoId": "joy-e-bike-monster-standard",
+    "brand": "joy-e-bike-bikes"
+  },
+  {
+    "assetInfoId": "joy-e-bike-wolf-standard",
+    "brand": "joy-e-bike-bikes"
+  },
+  {
+    "assetInfoId": "joy-e-bike-gen-nxt-standard",
+    "brand": "joy-e-bike-bikes"
+  },
+  {
+    "assetInfoId": "joy-e-bike-gen-nxt-standard",
+    "brand": "joy-e-bike-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-lite-standard",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-r30-standard",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-ridge-plus-standard",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-ridge-plus-standard",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-praise-pro",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-i-praise-plus",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-i-praise-plus",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "okinawa-praise-pro",
+    "brand": "okinawa-bikes"
+  },
+  {
+    "assetInfoId": "bgauss-b8-lead-acid",
+    "brand": "bgauss-bikes"
+  },
+  {
+    "assetInfoId": "bgauss-b8-lithium",
+    "brand": "bgauss-bikes"
+  },
+  {
+    "assetInfoId": "pure-ev-epluto-7g-standard",
+    "brand": "pure-ev-bikes"
+  },
+  {
+    "assetInfoId": "pure-ev-etrance-neo-standard",
+    "brand": "pure-ev-bikes"
+  },
+  {
+    "assetInfoId": "benelli-leoncino-500-standard",
+    "brand": "benelli-bikes"
+  },
+  {
+    "assetInfoId": "benelli-imperiale-400-standard",
+    "brand": "benelli-bikes"
+  },
+  {
+    "assetInfoId": "benelli-trk-251-standard",
+    "brand": "benelli-bikes"
+  },
+  {
+    "assetInfoId": "benelli-502c-standard",
+    "brand": "benelli-bikes"
+  },
+  {
+    "assetInfoId": "benelli-imperiale-400-standard",
+    "brand": "benelli-bikes"
+  },
+  {
+    "assetInfoId": "bounce-infinity-e1-without-battery-pack",
+    "brand": "bounce-bikes"
+  },
+  {
+    "assetInfoId": "bounce-infinity-e1-with-battery-pack",
+    "brand": "bounce-bikes"
+  }
+]
