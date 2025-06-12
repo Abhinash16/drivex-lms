@@ -36,10 +36,12 @@
                     <v-btn
                       v-bind="attrs"
                       v-on="on"
-                      icon
+                      rounded
+                      depressed
                       :color="ticketData.pinned ? 'error' : 'success'"
                       @click="changePinnedStatus(!ticketData.pinned)"
                     >
+                      {{ ticketData.pinned ? "Pinned" : "Pin" }}
                       <v-icon>{{
                         ticketData.pinned ? "mdi-pin-off" : "mdi-pin"
                       }}</v-icon>
@@ -87,27 +89,24 @@
 
               <!-- Phone -->
               <div class="d-flex align-center py-1">
-                <v-icon class="mr-2">mdi-phone</v-icon>
+                <div class="mr-2 font-weight-bold">Phone Number:</div>
                 <div>
-                  <a
-                    :href="`tel:${ticketData.customer_mobile}`"
-                    class="text-decoration-none"
-                  >
-                    {{ ticketData.customer_mobile }}
-                  </a>
+                  {{ ticketData.customer_mobile || "Not Provided" }}
                 </div>
               </div>
 
               <!-- Bike Model -->
               <div class="d-flex align-center py-1">
-                <v-icon class="mr-2">mdi-motorbike</v-icon>
-                <div>{{ ticketData.model }}</div>
+                <div class="mr-2 font-weight-bold">Model Selected:</div>
+                <div>{{ ticketData.model || "Not Provided" }}</div>
               </div>
 
               <!-- Registration Number -->
               <div class="d-flex align-center py-1">
-                <v-icon class="mr-2">mdi-card-account-details-outline</v-icon>
-                <div>{{ ticketData.registration_number }}</div>
+                <div class="mr-2 font-weight-bold">Registration Number:</div>
+                <div>
+                  {{ ticketData.registration_number || "Not Provided" }}
+                </div>
               </div>
 
               <v-divider class="my-4"></v-divider>
@@ -173,11 +172,10 @@
             <v-divider></v-divider>
 
             <!-- Timeline Section -->
-            <v-card flat class="pa-4" style="height: 600px">
+            <v-card flat class="pa-4">
               <h2 class="text-h6 font-weight-bold mb-4">Activity Timeline</h2>
-
               <!-- Vertical Scroll Wrapper -->
-              <div style="height: calc(100% - 48px); overflow-y: auto">
+              <div>
                 <v-timeline align-top dense class="pb-0">
                   <v-timeline-item
                     v-for="(data, index) in ticketComments"
@@ -1834,22 +1832,12 @@ export default {
 
       this.overlayLoading = true;
       try {
-        const response = await HTTP.post(
-          `drivex/leads/${this.applicationId}/comments`,
-          {
-            comment: this.comment,
-          }
-        );
+        await HTTP.post(`drivex/leads/${this.applicationId}/comments`, {
+          comment: this.comment,
+        });
 
         this.comment = "";
         await this.fetchComments();
-
-        Swal.fire({
-          icon: "success",
-          title: "Comment Added",
-          text: response?.data?.message || "Your comment added successfully.",
-          confirmButtonText: "OK",
-        });
       } catch (error) {
         Swal.fire({
           icon: "error",

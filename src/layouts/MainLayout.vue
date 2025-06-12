@@ -26,10 +26,10 @@
 
           <v-divider class="my-2"></v-divider>
 
-          <v-btn text block class="justify-start" to="/profile" router>
+          <!-- <v-btn text block class="justify-start" to="/profile" router>
             <v-icon left>mdi-account</v-icon>
             Profile
-          </v-btn>
+          </v-btn> -->
 
           <v-btn text block class="justify-start" to="/settings" router>
             <v-icon left>mdi-cog</v-icon>
@@ -59,7 +59,7 @@
       </template>
 
       <v-container>
-        <div>SF <v-chip x-small color="info">BETA 1.0</v-chip></div>
+        <div>DriveX-lms <v-chip x-small color="info">BETA 1.0</v-chip></div>
       </v-container>
 
       <v-list nav dense rounded>
