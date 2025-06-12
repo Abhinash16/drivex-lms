@@ -1602,6 +1602,7 @@
 import { HTTP } from "@/services/axios";
 import moment from "moment";
 import DateTimePicker from "@/components/DateTimePicker.vue";
+import Swal from "sweetalert2";
 
 export default {
   components: { DateTimePicker },
@@ -1752,25 +1753,44 @@ export default {
         this.ticketData = data;
         this.callStatusSelected = data.callStatus;
         await this.$store.dispatch("getLeadStagesList");
+      } catch (error) {
+        console.log(error.data?.data?.message || "Failed to update pin/unpin.");
       } finally {
         this.loading = false;
       }
     },
+
     async updateCallStatus() {
       this.loading = true;
       try {
-        await HTTP.put(
+        const response = await HTTP.put(
           `drivex/leads/${this.applicationId}/update/call-status`,
           {
             callStatus: this.callStatusSelected,
             currentCallStatus: this.ticketData.callStatus,
           }
         );
+
+        Swal.fire({
+          title: "Success",
+          text: response.data?.message || "Call status updated!",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+
         this.comment = "";
         this.fetchComments();
         this.updateCallStatusModal = false;
-      } finally {
         this.ticketData.callStatus = this.callStatusSelected;
+      } catch (error) {
+        console.error("Call status update error:", error);
+        Swal.fire({
+          title: "Error",
+          text: error.response?.data?.message || "Something went wrong!",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      } finally {
         this.loading = false;
       }
     },
@@ -1782,6 +1802,8 @@ export default {
           `drivex/leads/${this.applicationId}/comments`
         );
         this.ticketComments = data;
+      } catch (error) {
+        console.error("Error Comment while fetching:", error);
       } finally {
         this.overlayLoading = false;
       }
@@ -1790,9 +1812,17 @@ export default {
     async changePinnedStatus(pinned) {
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/pin`, {
-          pinned,
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/pin`,
+          {
+            pinned,
+          }
+        );
+        console.log("Changed pin/unpin:", response);
+      } catch (error) {
+        console.log(
+          error.response?.data?.message || "Failed to update pin/unpin."
+        );
       } finally {
         this.fetchticketData();
         this.overlayLoading = false;
@@ -1801,14 +1831,34 @@ export default {
 
     async addComment() {
       if (!this.comment) return;
+
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/comments`, {
-          comment: this.comment,
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/comments`,
+          {
+            comment: this.comment,
+          }
+        );
+
         this.comment = "";
+        await this.fetchComments();
+
+        Swal.fire({
+          icon: "success",
+          title: "Comment Added",
+          text: response?.data?.message || "Your comment added successfully.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Failed to Add Comment",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+        });
       } finally {
-        this.fetchComments();
         this.overlayLoading = false;
       }
     },
@@ -1816,20 +1866,43 @@ export default {
     async scheduleShowroomVisitTicket() {
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/stage`, {
-          comment: this.comment,
-          showroomSchedule: {
-            date: this.scheduleLeadShowroomDate,
-            time: "",
-            location: this.scheduleLeadShowroomLocation,
-          },
-          newStage: "Showroom Visit Scheduled",
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/stage`,
+          {
+            comment: this.comment,
+            showroomSchedule: {
+              date: this.scheduleLeadShowroomDate,
+              time: "",
+              location: this.scheduleLeadShowroomLocation,
+            },
+            newStage: "Showroom Visit Scheduled",
+          }
+        );
+
         this.scheduleLeadShowroomDialog = false;
         this.comment = "";
+
+        await this.fetchComments();
+        await this.fetchticketData();
+
+        Swal.fire({
+          icon: "success",
+          title: "Showroom Visit Scheduled",
+          text:
+            response?.data?.message || "Showroom visit scheduled successfully.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        // console.error("Error scheduling showroom visit:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Scheduling Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
+        });
       } finally {
-        this.fetchComments();
-        this.fetchticketData();
         this.overlayLoading = false;
       }
     },
@@ -1837,20 +1910,44 @@ export default {
     async scheduleDeliveryTicket() {
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/stage`, {
-          comment: this.comment,
-          deliverySchedule: {
-            date: this.schedulDeliveryDate,
-            time: "",
-            location: this.deliveryLocation,
-          },
-          newStage: "Delivery Scheduled",
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/stage`,
+          {
+            comment: this.comment,
+            deliverySchedule: {
+              date: this.schedulDeliveryDate,
+              time: "",
+              location: this.deliveryLocation,
+            },
+            newStage: "Delivery Scheduled",
+          }
+        );
+
         this.markDeliveryScheduledDialog = false;
         this.comment = "";
-      } finally {
+
         this.fetchComments();
         this.fetchticketData();
+
+        Swal.fire({
+          icon: "success",
+          title: "Delivery Scheduled",
+          text:
+            response?.data?.message ||
+            "The delivery has been scheduled successfully.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        // console.error("Error scheduling delivery:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Scheduling Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
+        });
+      } finally {
         this.overlayLoading = false;
       }
     },
@@ -1858,33 +1955,80 @@ export default {
     async scheduleTicket() {
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/stage`, {
-          comment: this.scheduledComment,
-          rescheduleDate: this.scheduledDate,
-          newStage: "Rescheduled",
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/stage`,
+          {
+            comment: this.scheduledComment,
+            rescheduleDate: this.scheduledDate,
+            newStage: "Rescheduled",
+          }
+        );
+
         this.scheduleLeadDialog = false;
         this.scheduledComment = "";
+
+        await this.fetchComments();
+        await this.fetchticketData();
+
+        Swal.fire({
+          icon: "success",
+          title: "Lead Rescheduled",
+          text:
+            response?.data?.message ||
+            "The lead has been successfully rescheduled.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        // console.error('Error rescheduling lead:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Reschedule Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
+        });
       } finally {
-        this.fetchComments();
-        this.fetchticketData();
         this.overlayLoading = false;
       }
     },
 
     async markStage(newStage) {
       if (!this.comment) return;
+
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/stage`, {
-          comment: this.comment,
-          newStage,
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/stage`,
+          {
+            comment: this.comment,
+            newStage,
+          }
+        );
+
         this.comment = "";
         this.closeDialogs();
-      } finally {
+
         this.fetchComments();
         this.fetchticketData();
+
+        Swal.fire({
+          icon: "success",
+          title: "Stage Updated",
+          text: response?.data?.message || `Lead moved to stage: ${newStage}`,
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        // console.error('Error updating stage:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Stage Update Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
+        });
+      } finally {
         this.overlayLoading = false;
       }
     },
@@ -1892,16 +2036,40 @@ export default {
     async markTicketClosed() {
       this.overlayLoading = true;
       try {
-        await HTTP.post(`drivex/leads/${this.applicationId}/update/stage`, {
-          comment: this.comment,
-          newStage: "Closed - Lost",
-          resonsForClosing: this.resonsForClosing,
-        });
+        const response = await HTTP.post(
+          `drivex/leads/${this.applicationId}/update/stage`,
+          {
+            comment: this.comment,
+            newStage: "Closed - Lost",
+            resonsForClosing: this.resonsForClosing,
+          }
+        );
+
         this.comment = "";
         this.closeTicketDialog = false;
-      } finally {
+
         this.fetchComments();
         this.fetchticketData();
+
+        Swal.fire({
+          icon: "success",
+          title: "Ticket Closed",
+          text:
+            response?.data?.message ||
+            "The ticket has been marked as Closed - Lost.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        // console.error('Error closing ticket:', error);
+        Swal.fire({
+          icon: "error",
+          title: "Close Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong while closing the ticket.",
+          confirmButtonText: "OK",
+        });
+      } finally {
         this.overlayLoading = false;
       }
     },

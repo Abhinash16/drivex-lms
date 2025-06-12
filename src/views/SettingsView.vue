@@ -3,7 +3,7 @@
     <v-row justify="center">
       <v-col cols="12" md="10" lg="8" xl="6">
         <!-- Single Main Profile Card -->
-        <v-card elevation="3">
+        <v-card elevation="3" :loading="loading">
           <!-- Profile Header Section -->
           <v-card-text class="pa-6">
             <v-row align="center">
@@ -208,6 +208,7 @@
                           :disabled="password.length < 6"
                           @click="resetPassword"
                           depressed
+                          :loading="loading"
                           rounded
                           large
                         >
@@ -228,7 +229,7 @@
       <v-snackbar
         v-model="successSnackbar"
         color="success"
-        timeout="3000"
+        timeout="1000"
         top
         right
       >
@@ -240,6 +241,8 @@
 
 <script>
 import { HTTP } from "@/services/axios";
+import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
@@ -248,19 +251,28 @@ export default {
       pauseLeadAssignment: false,
       password: "",
       successSnackbar: false,
+      loading: false,
     };
   },
   watch: {
     async pauseLeadAssignment() {
-      if (this.pauseLeadAssignment != this.profileData.pauseLeadAssignment) {
+      if (this.pauseLeadAssignment !== this.profileData.pauseLeadAssignment) {
         try {
           await HTTP.put("drivex/current-user/pauseLeadAssignment", {
             pauseLeadAssignment: this.pauseLeadAssignment,
           });
           this.successSnackbar = true;
           this.loadProfile();
-        } catch {
-          alert("something went wrong");
+        } catch (error) {
+          // console.error("Pause lead assignment failed:", error);
+          Swal.fire({
+            icon: "error",
+            title: "Update Failed",
+            text:
+              error?.response?.data?.message ||
+              "Something went wrong while updating lead assignment status.",
+            confirmButtonText: "OK",
+          });
         }
       }
     },
@@ -270,23 +282,61 @@ export default {
   },
   methods: {
     async resetPassword() {
-      if (this.password.length > 6) {
-        try {
-          await HTTP.put("drivex/current-user/update-password", {
-            password: this.password,
-          });
-          this.successSnackbar = true;
-          this.password = "";
-        } catch {
-          alert("something went wrong");
-        }
+      if (this.password.length < 6) {
+        Swal.fire({
+          icon: "warning",
+          title: "Invalid Password",
+          text: "Password must be at least 6 characters long.",
+          confirmButtonText: "OK",
+        });
+        return;
+      }
+
+      this.loading = true;
+      try {
+        const response = await HTTP.put("drivex/current-user/update-password", {
+          password: this.password,
+        });
+
+        this.password = "";
+
+        Swal.fire({
+          icon: "success",
+          title: "Password Updated",
+          text:
+            response?.data?.message ||
+            "Your password has been successfully updated.",
+          confirmButtonText: "OK",
+        });
+      } catch (error) {
+        console.error("Error updating password:", error);
+
+        Swal.fire({
+          icon: "error",
+          title: "Update Failed",
+          text:
+            error?.response?.data?.message ||
+            "Something went wrong. Please try again.",
+          confirmButtonText: "OK",
+        });
+      } finally {
+        this.loading = false;
       }
     },
+
     async loadProfile() {
-      const { data } = await HTTP.get("/drivex/current-user");
-      this.profileData = data;
-      this.pauseLeadAssignment = data.pauseLeadAssignment;
+      this.loading = true;
+      try {
+        const { data } = await HTTP.get("/drivex/current-user");
+        this.profileData = data;
+        this.pauseLeadAssignment = data.pauseLeadAssignment;
+      } catch (error) {
+        console.error("Failed to load profile:", error);
+      } finally {
+        this.loading = false;
+      }
     },
+
     openComposeEmailInNewTab(email) {
       const emailAddress = email; // Replace with the recipient's email address
       const subject = "Ontrack <> Carinfo"; // Replace with the subject of the email (optional)
