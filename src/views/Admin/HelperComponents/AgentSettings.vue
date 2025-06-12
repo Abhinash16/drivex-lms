@@ -1,78 +1,107 @@
 <template>
   <div>
     <v-container v-if="localAgent">
-      <v-card>
-        <v-container>
-          <div>
-            Status:
+      <v-card outlined class="rounded-lg">
+        <v-container class="pa-4">
+          <div class="mb-4">
+            <strong>Status:</strong>
             <v-chip
               outlined
-              :color="localAgent.status == 'active' ? 'green' : 'gray'"
-              class="ml-2"
-              >{{ this.localAgent.status }}</v-chip
+              :color="
+                localAgent.status === 'active' ? 'green darken-1' : 'grey'
+              "
+              text-color="dark"
+              class="ml-2 mr-2"
             >
-            <v-btn
-              color="primary"
-              text
-              class="ml-2"
-              @click="editDialog('status')"
-              >Edit</v-btn
-            >
+              {{ localAgent.status }}
+            </v-chip>
+            <v-btn icon small @click="editDialog('status')">
+              <v-icon color="primary">mdi-pencil</v-icon>
+            </v-btn>
           </div>
+
           <div>
-            Role: {{ roleFormatted }}
-            <v-btn color="primary" text class="ml-2" @click="editDialog('role')"
-              >Edit</v-btn
-            >
+            <strong>Role:</strong>
+            <span class="ml-2 mr-2">{{ roleFormatted }}</span>
+            <v-btn icon small @click="editDialog('role')">
+              <v-icon color="primary">mdi-pencil</v-icon>
+            </v-btn>
           </div>
         </v-container>
       </v-card>
     </v-container>
-    <v-dialog v-model="dialog" width="40%" persistent>
+
+    <!-- Edit Dialog -->
+    <v-dialog scrollable max-width="500" v-model="dialog" persistent>
       <v-card>
-        <v-container>
-          <!-- <v-text-field
-            v-model="editingPropertyValue"
-            outlined
-            dense
-            :label="propertyEditing"
-          ></v-text-field> -->
-          <div v-if="propertyEditing == 'Status'">
-            {{ editingPropertyValue ? "Active" : "Inactive" }}
-            <v-switch v-model="editingPropertyValue" inset></v-switch>
+        <v-container class="pa-4">
+          <!-- Header -->
+          <div class="d-flex justify-space-between align-center mb-4">
+            <span class="text-h6 font-weight-medium primary--text">
+              Edit {{ propertyEditing }}
+            </span>
+            <v-btn icon @click="cancel()">
+              <v-icon>mdi-close</v-icon>
+            </v-btn>
           </div>
-          <v-select
-            :items="roles"
-            v-else
-            solo
-            v-model="editingPropertyValue"
-            :item-text="'role'"
-            :item-value="'role'"
-          ></v-select>
-          <div class="d-flex justify-end">
-            <v-btn class="mr-2" @click="cancel()">Cancel</v-btn>
+
+          <!-- Content -->
+          <div>
+            <div
+              v-if="propertyEditing === 'Status'"
+              class="d-flex align-center justify-space-between"
+            >
+              <span>{{ editingPropertyValue ? "Active" : "Inactive" }}</span>
+              <v-switch v-model="editingPropertyValue" inset></v-switch>
+            </div>
+            <div v-else>
+              <v-select
+                v-model="editingPropertyValue"
+                :items="roles"
+                :item-text="'role'"
+                :item-value="'role'"
+                label="Select Role"
+                outlined
+                prepend-inner-icon="mdi-account-badge"
+              ></v-select>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="d-flex justify-end mt-4">
+            <v-btn text rounded large class="mr-2" @click="cancel()">
+              Cancel
+            </v-btn>
             <v-btn
               color="primary"
+              rounded
+              large
+              depressed
+              :disabled="editingPropertyReference === editingPropertyValue"
               @click="saveChanges()"
-              :disabled="editingPropertyReference == editingPropertyValue"
-              >Save changes</v-btn
             >
+              <v-icon left>mdi-check</v-icon>
+              Save Changes
+            </v-btn>
           </div>
         </v-container>
       </v-card>
     </v-dialog>
-    <v-dialog v-model="propertyChanged" width="30%">
+
+    <!-- Unsaved Changes Dialog -->
+    <v-dialog v-model="propertyChanged" max-width="400">
       <v-card>
-        <v-container>
-          <h4>Unsaved changes would be lost</h4>
-          <p>- Click cancel and save changes.</p>
+        <v-container class="pa-4">
+          <div class="text-h6 mb-2">Unsaved Changes</div>
+          <p class="mb-4">
+            You have unsaved changes. Click Cancel to go back and save them, or
+            OK to discard.
+          </p>
           <div class="d-flex justify-end">
-            <v-btn class="mr-2" small @click="propertyChanged = false"
+            <v-btn text class="mr-2" @click="propertyChanged = false"
               >Cancel</v-btn
             >
-            <v-btn color="primary" small @click="continueWithoutSaving"
-              >OK</v-btn
-            >
+            <v-btn color="primary" @click="continueWithoutSaving">OK</v-btn>
           </div>
         </v-container>
       </v-card>
@@ -82,6 +111,8 @@
 
 <script>
 import { HTTP } from "@/services/axios";
+import Swal from "sweetalert2";
+
 export default {
   data() {
     return {
@@ -92,6 +123,7 @@ export default {
       propertyChanged: false,
       roles: [],
       localAgent: { ...this.agent },
+      loading: false,
     };
   },
   props: {
@@ -119,16 +151,20 @@ export default {
       }
       this.dialog = true;
     },
+
     cancel() {
       if (this.editingPropertyReference != this.editingPropertyValue)
         this.propertyChanged = true;
       else this.dialog = false;
     },
+
     continueWithoutSaving() {
       this.propertyChanged = false;
       this.dialog = false;
     },
+
     async saveChanges() {
+      this.loading = true;
       try {
         let payload = {};
         switch (this.propertyEditing) {
@@ -147,16 +183,38 @@ export default {
         this.localAgent = data;
         this.$emit("update-agent", this.localAgent);
         console.log("🚀 ~ saveChanges ~ data:", data);
+
+        await Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Updated successfully!",
+          confirmButtonText: "OK",
+        });
       } catch (error) {
         console.log("🚀 ~ saveChanges ~ error:", error);
+        Swal.fire({
+          icon: "error",
+          text:
+            error.response?.data?.error ||
+            error.message ||
+            "Something went wrong. Please try again.",
+          title: "Failed",
+          confirmButtonText: "OK",
+        });
       } finally {
         this.dialog = false;
+        this.loading = false;
       }
     },
+
     async fetchRoles() {
-      const { data } = await HTTP.get("/drivex/roles");
-      this.roles = data;
-      console.log(this.roles);
+      try {
+        const { data } = await HTTP.get("/drivex/roles");
+        this.roles = data;
+        console.log("Roles fetched:", this.roles);
+      } catch (error) {
+        console.error("Failed to fetch roles:", error);
+      }
     },
   },
   computed: {
