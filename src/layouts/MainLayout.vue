@@ -4,9 +4,46 @@
       <v-app-bar-nav-icon @click="nav = !nav"></v-app-bar-nav-icon>
       <v-toolbar-title>{{ $route.name }}</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn @click="logout()" icon>
-        <v-icon>mdi-logout-variant</v-icon>
-      </v-btn>
+      <v-menu offset-y bottom transition="scale-transition">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn text v-bind="attrs" v-on="on" class="d-flex align-center">
+            <v-avatar size="32" class="mr-2">
+              <v-icon color="primary">mdi-account-circle</v-icon>
+            </v-avatar>
+            <span class="font-weight-medium text-body-2 d-none d-sm-inline">
+              {{ loggedInUser?.username }}
+            </span>
+            <v-icon small class="ml-1">mdi-chevron-down</v-icon>
+          </v-btn>
+        </template>
+
+        <v-card class="pa-2" min-width="210">
+          <v-card-text class="pa-2 pb-0">
+            <div class="text-subtitle-2 font-weight-medium">
+              Logged in as <strong>{{ loggedInUser?.username }}</strong>
+            </div>
+          </v-card-text>
+
+          <v-divider class="my-2"></v-divider>
+
+          <v-btn text block class="justify-start" to="/profile" router>
+            <v-icon left>mdi-account</v-icon>
+            Profile
+          </v-btn>
+
+          <v-btn text block class="justify-start" to="/settings" router>
+            <v-icon left>mdi-cog</v-icon>
+            Settings
+          </v-btn>
+
+          <v-divider class="my-2"></v-divider>
+
+          <v-btn text block class="justify-start red--text" @click="logout">
+            <v-icon left color="error">mdi-logout</v-icon>
+            Logout
+          </v-btn>
+        </v-card>
+      </v-menu>
     </v-app-bar>
 
     <v-navigation-drawer v-model="nav" app>

@@ -2,7 +2,7 @@
   <v-container fluid class="fill-height">
     <v-row justify="center" align="center" class="fill-height">
       <v-col cols="12" sm="8" md="5" lg="4" xl="3">
-        <v-card elevation="8" class="mx-auto" shaped>
+        <v-card elevation="8" class="mx-auto" shaped :loading="loading">
           <!-- Header -->
           <v-card-title class="justify-center pt-8 pb-4">
             <div class="text-center">
@@ -32,6 +32,7 @@
                 label="Username"
                 prepend-inner-icon="mdi-account"
                 outlined
+                rounded
                 :rules="usernameRules"
                 :disabled="loading"
                 class="mb-2"
@@ -46,6 +47,7 @@
                 prepend-inner-icon="mdi-lock"
                 :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
                 @click:append="showPassword = !showPassword"
+                rounded
                 outlined
                 :rules="passwordRules"
                 :disabled="loading"
@@ -59,7 +61,7 @@
                 color="primary"
                 block
                 rounded
-                large
+                x-large
                 elevation="2"
                 :loading="loading"
                 :disabled="!isFormValid || loading"
@@ -80,17 +82,6 @@
                 class="mb-4"
               >
                 {{ error }}
-              </v-alert>
-
-              <!-- Success -->
-              <v-alert
-                v-if="successMessage"
-                type="success"
-                dense
-                outlined
-                class="mb-4"
-              >
-                {{ successMessage }}
               </v-alert>
             </v-form>
           </v-card-text>
