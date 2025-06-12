@@ -11,7 +11,7 @@
               <v-icon color="primary">mdi-account-circle</v-icon>
             </v-avatar>
             <span class="font-weight-medium text-body-2 d-none d-sm-inline">
-              {{ loggedInUser.username }}
+              {{ loggedInUser?.username }}
             </span>
             <v-icon small class="ml-1">mdi-chevron-down</v-icon>
           </v-btn>
@@ -20,7 +20,7 @@
         <v-card class="pa-2" min-width="210">
           <v-card-text class="pa-2 pb-0">
             <div class="text-subtitle-2 font-weight-medium">
-              Logged in as <strong>{{ loggedInUser.username }}</strong>
+              Logged in as <strong>{{ loggedInUser?.username }}</strong>
             </div>
           </v-card-text>
 

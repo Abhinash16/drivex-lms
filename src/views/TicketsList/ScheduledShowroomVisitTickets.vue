@@ -1,103 +1,123 @@
 <template>
-  <div>
-    <v-container>
-      <v-card outlined :loading="loading">
-        <v-card-title>
-          Showroom Visit Scheduled Leads ({{ totalTickets }})
-        </v-card-title>
-        <v-tabs>
-          <v-tab
-            @click="updateExpiryStatus(data.name)"
-            v-for="(data, index) in avilableScheduleFilters"
-            :key="index"
-          >
-            {{ data.name }} ({{ data.count }})
-          </v-tab>
-        </v-tabs>
-        <v-simple-table>
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Name</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Type</th>
-              <th scope="col">Model</th>
-              <th scope="col">Reg No</th>
-              <th scope="col">Stage</th>
-              <th scope="col">Call Status</th>
-              <th scope="col">Assigned to</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(data, index) in tableData" :key="index">
-              <th scope="row">{{ index + 1 }}</th>
-              <td>
-                {{ data.customer_name }}
-                <span
-                  class="success--text"
-                  v-if="data.currentStage == 'Fresh Lead'"
-                >
-                  <strong>- new*</strong>
-                </span>
-              </td>
-              <td>
-                <a :href="'tel:' + data.customer_mobile">{{
-                  data.customer_mobile
-                }}</a>
-              </td>
-              <td>
-                {{ data.enquiry_type }}
-              </td>
-              <td>
-                {{ data.model }}
-              </td>
-              <td>{{ data.registration_number }}</td>
-              <td :style="{ color: getStatusColor(data.currentStage) }">
-                <strong>{{ data.currentStage }}</strong>
-              </td>
-              <td :style="{ color: getCallStatusColor(data.callStatus) }">
-                <strong>{{ data.callStatus }}</strong>
-              </td>
-              <td>{{ data.assignedTo ? data.assignedTo : "unassigned" }}</td>
-              <td>
-                <v-btn
-                  :href="'/lead/' + data.applicationId"
-                  target="_blank"
-                  icon
-                >
-                  <v-icon>mdi-eye</v-icon>
-                </v-btn>
-              </td>
-            </tr>
-          </tbody>
-        </v-simple-table>
+  <v-container fluid>
+    <v-card outlined class="rounded-lg" :loading="loading">
+      <v-card-title>
+        <v-icon left color="primary" class="mr-2"
+          >mdi-office-building-marker</v-icon
+        >
+        Showroom Visit Scheduled Leads ({{ totalTickets }})
+      </v-card-title>
+      <v-tabs>
+        <v-tab
+          @click="updateExpiryStatus(data.name)"
+          v-for="(data, index) in avilableScheduleFilters"
+          :key="index"
+        >
+          {{ data.name }} ({{ data.count }})
+        </v-tab>
+      </v-tabs>
 
-        <v-container>
-          <v-btn
-            v-if="!allLoaded"
-            text
-            @click="loadMore"
-            class="my-4"
-            :disabled="loading"
-          >
-            Load More
-          </v-btn>
+      <v-divider></v-divider>
 
-          <v-progress-circular
-            v-if="loading"
-            indeterminate
-            color="primary"
-            class="my-4"
-          ></v-progress-circular>
+      <v-simple-table>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Type</th>
+            <th scope="col">Model</th>
+            <th scope="col">Reg No</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Call Status</th>
+            <th scope="col">Assigned to</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(data, index) in tableData" :key="index">
+            <td>{{ index + 1 }}</td>
+            <td>
+              {{ data.customer_name }}
+              <v-chip
+                v-if="data.currentStage === 'Fresh Lead'"
+                color="success"
+                text-color="white"
+                x-small
+                class="ml-1"
+              >
+                new*
+              </v-chip>
+            </td>
+            <td>
+              {{ data.customer_mobile }}
+            </td>
+            <td>
+              <v-chip outlined small>{{ data.enquiry_type }}</v-chip>
+            </td>
+            <td>{{ data.model }}</td>
+            <td>{{ data.registration_number }}</td>
+            <td>
+              <v-chip
+                small
+                :color="getStatusColor(data.currentStage)"
+                text-color="white"
+              >
+                {{ data.currentStage }}
+              </v-chip>
+            </td>
+            <td>
+              <v-chip
+                small
+                :color="getCallStatusColor(data.callStatus)"
+                text-color="white"
+              >
+                {{ data.callStatus }}
+              </v-chip>
+            </td>
+            <td>
+              <v-chip
+                small
+                :color="data.assignedTo ? 'green lighten-2' : 'grey lighten-1'"
+                :text-color="data.assignedTo ? 'white' : 'black'"
+              >
+                {{ data.assignedTo || "Unassigned" }}
+              </v-chip>
+            </td>
+            <td>
+              <v-btn
+                :href="'/lead/' + data.applicationId"
+                target="_blank"
+                icon
+                color="primary"
+              >
+                <v-icon>mdi-eye</v-icon>
+              </v-btn>
+            </td>
+          </tr>
+        </tbody>
+      </v-simple-table>
 
-          <div v-if="allLoaded" type="success" class="my-4">
-            🎉 You're all caught up. 🎉
-          </div>
-        </v-container>
-      </v-card>
-    </v-container>
-  </div>
+      <v-divider></v-divider>
+
+      <v-card-text class="text-center">
+        <div v-if="allLoaded" class="text-subtitle-2 mt-4 mb-2">
+          🎉 You're all caught up. 🎉
+        </div>
+
+        <v-btn
+          text
+          color="primary"
+          class="mt-2"
+          v-else
+          @click="loadMore"
+          :disabled="loading"
+        >
+          Load More
+        </v-btn>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>

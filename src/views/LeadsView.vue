@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card outlined class="rounded-lg">
+    <v-card outlined class="rounded-lg" :loading="loading">
       <v-card-title class="py-4 px-6 d-flex align-center">
         <v-icon left color="primary" class="mr-2">mdi-account-multiple</v-icon>
         <span class="text-h6">All Leads ({{ totalTickets }})</span>
@@ -8,19 +8,19 @@
 
       <v-divider></v-divider>
 
-      <v-simple-table dense>
+      <v-simple-table>
         <thead>
           <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Type</th>
-            <th>Model</th>
-            <th>Reg No</th>
-            <th>Stage</th>
-            <th>Call Status</th>
-            <th>Assigned to</th>
-            <th>Action</th>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Type</th>
+            <th scope="col">Model</th>
+            <th scope="col">Reg No</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Call Status</th>
+            <th scope="col">Assigned to</th>
+            <th scope="col">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -104,13 +104,6 @@
         >
           Load More
         </v-btn>
-
-        <v-progress-circular
-          v-if="loading"
-          indeterminate
-          color="primary"
-          class="my-4"
-        ></v-progress-circular>
       </v-card-text>
     </v-card>
   </v-container>
